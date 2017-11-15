@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SAP Cross Collaboration</title>
+    <link rel="stylesheet" href="css/cui-standard.min.css">
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body class="cui">
+    <div class="content-fluid">
+        <main>
+            <header class="header">
+                <div class="header-bar container">
+                    <a class="btn btn--small btn--icon toggle-menu" id="toggle" href="#menu">
+                        <span class="icon-list-menu"></span>
+                    </a>
+					<div id="menu">
+						<ul>
+							<li class="toggleMenu"><a href="admin-home.html" class="linkToggle">Admin Home</li></a>
+							<li class="toggleMenu"><a href="admin-topic.html" class="linkToggle">Topics</li></a>
+							<li class="toggleMenu"><a href="admin-team.html" class="linkToggle">Teams</a></li>
+							<li class="toggleMenu"><a href="admin-timeslot.html" class="linkToggle">Timeslots</a></li>
+							<li class="toggleMenu"><a href="admin-assignment.html" class="linkToggle">Assignments</a></li>
+						</ul>
+					</div>
+                    <a class="header-bar__logo" href="admin-home.html">
+                        <span class="icon-cisco"></span>
+                    </a>
+					
+                    <div class="header-bar__main">
+					<ul class="breadcrumb">
+						<li><a href="admin-home.html">Admin Home</a></li>
+						<li><span>Teams</span></li>
+					</ul>
+                        <div class="header-heading">
+                            <h1 class="page-title">SAP Cross Collaboration Platform</h1>
+                        </div>
+                    </div>
+					<form>
+						<div class="form-group">
+							<div class="form-group__text select">
+								<select name="select2">
+									<option value="0" selected>Spring 2018</option>
+								</select>
+								<label for="select2">Select Cohort</label>
+							</div>
+						</div>
+					</form>
+                </div>
+            </header>
+            <div class="hero hero--blue">
+                <div class="container">
+					
+                </div>
+            </div>
+            <div class="content">
+                <div class="container">
+					<div>
+						<br>
+						<h4>Add Team Members</h4>
+						<hr>
+						<form>
+							<div class="form-group">
+								<br>
+								<div class="row">
+									<div class="col-md-3">
+										<div class="form-group__text">
+											<input id="topics" type="text" placeholder="Name">
+											<label for="topics"></label>
+										</div>									
+									</div>
+									<div class="col-md-3">
+										<div class="form-group__text">
+											<input id="CEC" type="text" placeholder="CEC">
+											<label for="CEC"></label>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group__text select">
+											<select name="select2">
+												<option value="0" selected>RTP</option>
+												<option value="option1">Mexico</option>
+												<option value="option2">Krakow</option>
+											</select>
+											<label for="select2">Location</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<button class="btn btn--primary">Add</button>
+						</form>
+						<br>
+					</div>
+					
+					<h4>Members</h4>
+					<hr>
+					Check the box next to any team member to delete them.
+					<br>
+					<br>
+					<table class="table table--bordered table--highlight">
+						<tbody>
+							<tr>
+								<td>
+									<label class="checkbox">
+										<input type="checkbox"/>
+										<span class="checkbox__input"></span>
+									</label>
+								</td>
+								<td>Allison Zeppuhar</td>
+							</tr>
+							<tr>
+								<td>
+									<label class="checkbox">
+										<input type="checkbox">
+										<span class="checkbox__input"></span>
+									</label>
+								</td>
+								<td>David Hoy</td>
+							</tr>
+							<tr>
+								<td>
+									<label class="checkbox">
+										<input type="checkbox"/>
+										<span class="checkbox__input"></span>
+									</label>
+								</td>
+								<td>Xavier Parker-Smith</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<br>
+					
+					<button class="btn btn--primary">Delete</button>
+					<button class="btn btn--primary">Assign</button>
+					
+					<br>
+					<br>
+					
+					<h4>Teams</h4>
+					<hr>
+					Drag and drop names to edit teams.  Click save when done.
+                    <div class="row">
+				
+						<div class="col-md-3">
+							<table id="table-draggable1" class="table table--bordered table--highlight">
+									
+								<tbody class="connectedSortable">
+									<tr>
+										<th>Team 1</th>
+									</tr>
+									<tr>
+										<td>Allison Zeppuhar</td>
+									</tr>
+									<tr>
+										<td>David Hoy</td>
+									</tr>
+									<tr>
+										<td>Xavier Parker-Smith</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+                        <div class="col-md-3" >
+                            <table id="table-draggable2" class="table table--bordered table--highlight">
+
+									
+
+								<tbody class="connectedSortable">
+									<tr>
+										<th>Team 2</th>
+									</tr>
+									<tr>
+										<td>Allison Zeppuhar</td>
+									</tr>
+									<tr>
+										<td>David Hoy</td>
+									</tr>
+									<tr>
+										<td>Xavier Parker-Smith</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+                        <div class="col-md-3">
+                            <table id="table-draggable3" class="table table--bordered table--highlight">
+								<tbody class="connectedSortable">
+									<tr>
+										<th>Team 3</th>
+									</tr>
+									<tr>
+										<td>Allison Zeppuhar</td>
+									</tr>
+									<tr>
+										<td>David Hoy</td>
+									</tr>
+									<tr>
+										<td>Xavier Parker-Smith</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+                        <div class="col-md-3">
+                          <table id="table-draggable4" class="table table--bordered table--highlight">
+						
+								<tbody class="connectedSortable">
+									<tr>
+										<th>Team 4</th>
+									</tr>
+									<tr>
+										<td>Allison Zeppuhar</td>
+									</tr>
+									<tr>
+										<td>David Hoy</td>
+									</tr>
+									<tr>
+										<td>Xavier Parker-Smith</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
+                        </div>
+                    </div>
+					<button class="btn btn--primary">Save</button>
+				</div>
+				<!-- makes footer unsticky to be within the container div -->
+				<footer class="footer footer--new">
+					<div class="footer__links">
+						<ul class="list">
+							<li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+							<li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+							<li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+						</ul>
+					</div>
+					<div class="footer__legal">
+						<div class="footer__logo">
+							<a href="http://www.cisco.com" target="_blank">
+								<span class="icon-cisco"></span>
+							</a>
+						</div>
+						<div class="footer__copyright">
+							<div>Copyright &copy; 2017 Cisco Systems Inc.</div>
+							<div>All rights reserved.</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+        </main>
+    </div>
+	
+	<script>
+		var theToggle = document.getElementById('toggle');
+
+		// based on Todd Motto functions
+		// https://toddmotto.com/labs/reusable-js/
+
+		// hasClass
+		function hasClass(elem, className) {
+			return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+		}
+		// addClass
+		function addClass(elem, className) {
+			if (!hasClass(elem, className)) {
+				elem.className += ' ' + className;
+			}
+		}
+		// removeClass
+		function removeClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+			if (hasClass(elem, className)) {
+				while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+					newClass = newClass.replace(' ' + className + ' ', ' ');
+				}
+				elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			}
+		}
+		// toggleClass
+		function toggleClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+			if (hasClass(elem, className)) {
+				while (newClass.indexOf(" " + className + " ") >= 0 ) {
+					newClass = newClass.replace( " " + className + " " , " " );
+				}
+				elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			} else {
+				elem.className += ' ' + className;
+			}
+		}
+
+		theToggle.onclick = function() {
+		   toggleClass(this, 'on');
+		   return false;
+		}
+		
+		var $tabs = $('#table-draggable2')
+		$("tbody.connectedSortable")
+			.sortable({
+				connectWith: ".connectedSortable",
+				items: "> tr:not(:first)",
+				appendTo: $tabs,
+				helper: "clone",
+				zIndex: 999990
+			})
+			.disableSelection();
+		var $tab_items = $(".nav-tabs > li", $tabs).droppable({
+			accept: ".connectedSortable tr",
+			hoverClass: "ui-state-hover",
+			drop: function (event, ui) {
+				return false;
+			}
+		});$(document).ready(function() {
+					$("#tblData").tableDnD();
+				});
+				
+				$("#tblData").tableDnD({
+				   onDragClass: "myDragClass"
+				});
+				
+				var iCnt = 1; 
+				$("#tblData tr").each(function() {   
+					var id = "tr" + parseInt(iCnt);   
+					$(this).attr("id", id);   
+					iCnt++; 
+				});
+	</script>
+</body>
+</html>
