@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SAP Cross Collaboration</title>
+    <link rel="stylesheet" href="css/cui-standard.min.css">
+</head>
+<body class="cui">
+    <div class="content-fluid">
+        <main>
+            <header class="header">
+                <div class="header-bar container">
+                    <a class="btn btn--small btn--icon toggle-menu" id="toggle" href="#menu">
+                        <span class="icon-list-menu"></span>
+                    </a>
+					<div id="menu">
+						<ul>
+							<li class="toggleMenu"><a href="team-members.html" class="linkToggle">Members</li></a>
+							<li class="toggleMenu"><a href="team-topics.html" class="linkToggle">Topics</a></li>
+							<li class="toggleMenu"><a href="team-assignment.html" class="linkToggle">Assignments</a></li>
+							<li class="toggleMenu"><a href="team-score.html" class="linkToggle">Score</a></li>
+						</ul>
+					</div>
+                    <a class="header-bar__logo">
+                        <span class="icon-cisco"></span>
+                    </a>
+                    <div class="header-bar__main">
+                        <div class="header-heading">
+                            <h1 class="page-title">SAP Cross Collaboration Platform</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="hero hero--blue">
+                <div class="container">
+					
+                </div>
+            </div>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+						<div class="col-md-3 menuTopic">
+							<a href="team-member.html" class="menuPic">
+								<img class="thumb thumb--huge thumb--square" src="img/member.jpeg" />
+							</a>
+							<div class="menuMid">
+								<a href="team-member.html"><div class="menuText">Members</div></a>
+							</div>
+						</div>
+						<div class="col-md-3 menuTopic">
+							<a href="team-topic.html" class="menuPic">
+								<img class="thumb thumb--huge thumb--square" src="img/topic.jpg" />
+							</a>
+							<div class="menuMid">
+								<a href="team-topic.html"><div class="menuText">Topics</div></a>
+							</div>
+						</div>
+
+                        <div class="col-md-3 menuTopic" >
+                            <a href="team-assignment.html" class="menuPic">
+								<img class="thumb thumb--huge thumb--square" src="img/assignments.jpg" />
+							</a>
+							<div class="menuMid">
+								<a href="team-assignment.html"><div class="menuText">Assignment</div></a>
+							</div>
+                        </div>
+
+						<div class="col-md-3 menuTopic">
+                            <a href="team-score.html" class="menuPic">
+								<img class="thumb thumb--huge thumb--square" src="img/score.jpg" />
+							</a>
+							<div class="menuMid">
+								<a href="team-score.html"><div class="menuText">Score</div></a>
+							</div>
+                        </div>
+
+                    </div> 
+					<div class="row" style="margin-bottom: 100px;">
+						<h3>Team View</h3>
+						<p>Welcome to the SAP Cross Collaboration Platform team view!  From here, you can view your team, preference your topics,
+						   see your topic assignment, and view your team score once the project is complete. </p>
+					</div>
+				</div>
+				<!-- makes footer unsticky to be within the container div -->
+				<footer class="footer footer--new">
+					<div class="footer__links">
+						<ul class="list">
+							<li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+							<li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+							<li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+						</ul>
+					</div>
+					<div class="footer__legal">
+						<div class="footer__logo">
+							<a href="http://www.cisco.com" target="_blank">
+								<span class="icon-cisco"></span>
+							</a>
+						</div>
+						<div class="footer__copyright">
+							<div>Copyright &copy; 2017 Cisco Systems Inc.</div>
+							<div>All rights reserved.</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+			
+        </main>
+    </div>
+	
+	<script>
+		var theToggle = document.getElementById('toggle');
+
+		// based on Todd Motto functions
+		// https://toddmotto.com/labs/reusable-js/
+
+		// hasClass
+		function hasClass(elem, className) {
+			return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+		}
+		// addClass
+		function addClass(elem, className) {
+			if (!hasClass(elem, className)) {
+				elem.className += ' ' + className;
+			}
+		}
+		// removeClass
+		function removeClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+			if (hasClass(elem, className)) {
+				while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+					newClass = newClass.replace(' ' + className + ' ', ' ');
+				}
+				elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			}
+		}
+		// toggleClass
+		function toggleClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+			if (hasClass(elem, className)) {
+				while (newClass.indexOf(" " + className + " ") >= 0 ) {
+					newClass = newClass.replace( " " + className + " " , " " );
+				}
+				elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			} else {
+				elem.className += ' ' + className;
+			}
+		}
+
+		theToggle.onclick = function() {
+		   toggleClass(this, 'on');
+		   return false;
+		}
+	</script>
+</body>
+</html>
