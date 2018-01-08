@@ -3,22 +3,16 @@ from django.forms import ModelForm
 from django.db import models
 from .models import Member
 
-class AddMemberForm(forms.Form):
-    locations = (
-        ('RTP','RTP'),
-        ('Mexico', 'Mexico'),
-        ('Krakow','Krakow'),
-    )
-    name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Name'}),max_length=50)
-    cec = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'CEC'}),max_length=10)
-    location = forms.ChoiceField(choices=locations)
 
-class MemberForm(ModelForm):
+class AddMemberForm(ModelForm):
     class Meta:
         model = Member
-        fields = ['fName','cec','location']
+        fields = ['fName','lName','cec','location']
         widgets = {
-            'fName': forms.TextInput(attrs={'placeholder':'Name'}),
+            'fName': forms.TextInput(attrs={'placeholder':'First Name'}),
+            'lName': forms.TextInput(attrs={'placeholder':'Last Name'}),
             'cec': forms.TextInput(attrs={'placeholder':'CEC'}),
         }
+##class MembersForm(forms.Form):
+    ##member = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple)
 

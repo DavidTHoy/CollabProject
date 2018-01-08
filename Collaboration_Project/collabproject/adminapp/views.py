@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
-from .forms import MemberForm
+from .forms import AddMemberForm
+from .models import Member
 
 
 # Create your views here.
@@ -17,22 +18,24 @@ def topic(request):
 
 def team(request):
     template = loader.get_template('adminapp/admin-team.html')
-    form = MemberForm()
-    context = {
-        "form": form
-    }
+
+    if request.method == 'GET':
+        form = AddMemberForm()
+        context = {
+            "form": form
+        }
+        return HttpResponse(template.render(context, request))
 
     if request.method == 'POST':
-        form = MemberForm(request.POST)
+        form = AddMemberForm(request.POST)
         if form.is_valid():
 
             fName = form.cleaned_data['fName']
-            name = fName.split()
-            fName = name[0]
-            lName = name[1]
-            cec = form.cleaned_data['cec']
+            lName = form.cleaned_data['lName']
             location = form.cleaned_data['location']
-            form.save()
+            cec = form.cleaned_data['cec']
+            member_item = form.save(commit=False)
+            member_item.save()
             context = {
                 "form": form,
                 "fName": fName,
@@ -42,10 +45,7 @@ def team(request):
             }
             return HttpResponse(template.render(context, request))
 
-    #return render(request, template, context)
 
-
-    return HttpResponse(template.render(context,request))
 
 def timeslot(request):
     template = loader.get_template('adminapp/admin-timeslot.html')

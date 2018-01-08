@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>SAP Cross Collaboration</title>
 	{% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'adminapps/css/cui-standard.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminapp/css/cui-standard.min.css' %}">
 
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -72,7 +72,16 @@
 										<div class="form-group__text">
 											<!--<input id="form.name.id_for_label" type="text" placeholder="Name">-->
 											{{ form.fName }}
-											<label for="form.name.id_for_label"></label>
+											<label for="form.fName.id_for_label"></label>
+
+											<!--<h2> {{ fName }}</h2>-->
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group__text">
+											<!--<input id="form.name.id_for_label" type="text" placeholder="Name">-->
+											{{ form.lName }}
+											<label for="form.lName.id_for_label"></label>
 
 											<!--<h2> {{ lName }}</h2>-->
 										</div>
@@ -114,7 +123,7 @@
 					<br>
 					<table class="table table--bordered table--highlight">
 						<tbody>
-							<tr>
+							<!--<tr>
 								<td>
 									<label class="checkbox">
 										<input type="checkbox"/>
@@ -131,15 +140,16 @@
 									</label>
 								</td>
 								<td>David Hoy</td>
-							</tr>
+							</tr>-->
 							<tr>
 								<td>
 									<label class="checkbox">
-										<input type="checkbox"/>
+										<!--<input type="checkbox"/>-->
+
 										<span class="checkbox__input"></span>
 									</label>
 								</td>
-								<td>Xavier Parker-Smith</td>
+								<!--<td>Xavier Parker-Smith</td>-->
 							</tr>
 						</tbody>
 					</table>
