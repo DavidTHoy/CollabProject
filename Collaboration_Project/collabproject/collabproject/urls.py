@@ -19,5 +19,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     url(r'^adminapp/',include('adminapp.urls')),
+    url(r'^judgeapp', include('judgeapp.urls')),
+    url(r'^teamapp', include('teamapp.urls')),
     path('admin/', admin.site.urls),
 ]
