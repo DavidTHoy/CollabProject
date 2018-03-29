@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="{% url 'login' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  Username:<br>
+  <input type="text" name="username" value="">
+  <br>
+  Password:<br>
+  <input type="text" name="password" value="">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

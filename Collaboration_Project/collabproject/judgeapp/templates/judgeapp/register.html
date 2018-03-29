@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<html>
+<body>
+<form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+  Username:<br>
+  <input type="text" name="username" value="">
+  <br>
+  Password:<br>
+  <input type="text" name="password" value="">
+  <br><br>
+  Email:<br>
+  <input type="text" name="email" value="">
+  <br>
+  Confirm Email:<br>
+  <input type="text" name="email2" value="">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+{{ form.errors}}
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

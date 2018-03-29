@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        Hello {{ current_user }}
+
+    <p>Thank you for signing up to judge this year's SAP Cross Collaboration Presentations. Your timeslots have been recorded:</p>
+
+        {% for each in chosen %}
+            <p>{{ each }}</p>
+        {% endfor %}
+
+
+    <p> If you would like to change your timeslots, you are currently SOL. Thank you </p>
+</head>
+<body>
+
+</body>
+</html>

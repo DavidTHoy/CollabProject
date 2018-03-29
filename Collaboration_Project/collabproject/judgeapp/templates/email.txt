@@ -1,0 +1,2 @@
+Hello {{current_user}},
+These are you choices: {{ chosen }}
