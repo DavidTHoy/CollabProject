@@ -5,7 +5,7 @@
     <title>SAP Cross Collaboration</title>
     <link rel="stylesheet" href="css/cui-standard.min.css">
 
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
@@ -29,7 +29,7 @@
                     <a class="header-bar__logo" href="admin-home.html">
                         <span class="icon-cisco"></span>
                     </a>
-					
+
                     <div class="header-bar__main">
 					<ul class="breadcrumb">
 						<li><a href="admin-home.html">Admin Home</a></li>
@@ -53,7 +53,7 @@
             </header>
             <div class="hero hero--blue">
                 <div class="container">
-					
+
                 </div>
             </div>
             <div class="content">
@@ -70,7 +70,7 @@
 										<div class="form-group__text">
 											<input id="topics" type="text" placeholder="Name">
 											<label for="topics"></label>
-										</div>									
+										</div>
 									</div>
 									<div class="col-md-3">
 										<div class="form-group__text">
@@ -95,7 +95,7 @@
 						</form>
 						<br>
 					</div>
-					
+
 					<h4>Members</h4>
 					<hr>
 					Check the box next to any team member to delete them.
@@ -132,23 +132,23 @@
 							</tr>
 						</tbody>
 					</table>
-					
+
 					<br>
-					
+
 					<button class="btn btn--primary">Delete</button>
 					<button class="btn btn--primary">Assign</button>
-					
+
 					<br>
 					<br>
-					
+
 					<h4>Teams</h4>
 					<hr>
 					Drag and drop names to edit teams.  Click save when done.
                     <div class="row">
-				
+
 						<div class="col-md-3">
 							<table id="table-draggable1" class="table table--bordered table--highlight">
-									
+
 								<tbody class="connectedSortable">
 									<tr>
 										<th>Team 1</th>
@@ -175,7 +175,7 @@
                         <div class="col-md-3" >
                             <table id="table-draggable2" class="table table--bordered table--highlight">
 
-									
+
 
 								<tbody class="connectedSortable">
 									<tr>
@@ -225,7 +225,7 @@
                         </div>
                         <div class="col-md-3">
                           <table id="table-draggable4" class="table table--bordered table--highlight">
-						
+
 								<tbody class="connectedSortable">
 									<tr>
 										<th>Team 4</th>
@@ -279,7 +279,7 @@
 			</div>
         </main>
     </div>
-	
+
 	<script>
 		var theToggle = document.getElementById('toggle');
 
@@ -323,7 +323,7 @@
 		   toggleClass(this, 'on');
 		   return false;
 		}
-		
+
 		var $tabs = $('#table-draggable2')
 		$("tbody.connectedSortable")
 			.sortable({
@@ -331,6 +331,7 @@
 				items: "> tr:not(:first)",
 				appendTo: $tabs,
 				helper: "clone",
+        receive: function(event,ui){console.log(ui.item[0].innerText)},
 				zIndex: 999990
 			})
 			.disableSelection();
@@ -340,19 +341,20 @@
 			drop: function (event, ui) {
 				return false;
 			}
-		});$(document).ready(function() {
+		});
+    $(document).ready(function() {
 					$("#tblData").tableDnD();
 				});
-				
+
 				$("#tblData").tableDnD({
 				   onDragClass: "myDragClass"
 				});
-				
-				var iCnt = 1; 
-				$("#tblData tr").each(function() {   
-					var id = "tr" + parseInt(iCnt);   
-					$(this).attr("id", id);   
-					iCnt++; 
+
+				var iCnt = 1;
+				$("#tblData tr").each(function() {
+					var id = "tr" + parseInt(iCnt);
+					$(this).attr("id", id);
+					iCnt++;
 				});
 	</script>
 </body>

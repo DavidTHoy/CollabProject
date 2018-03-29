@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin-topic/',views.topic, name='topic'),
     path('admin-team/',views.team, name='team'),
     path('admin-timeslot/',views.timeslot, name='timeslot'),
-    path('admin-assignment/',views.assignment, name="assignment")
+    path('admin-assignment/',views.assignment, name="assignment"),
+    path('admin-team/create',views.createTeam, name="createTeam")
 
 ]
