@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SAP Cross Collaboration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'teamapp\css\cui-standard.min.css' %}">
+</head>
+<body class="cui">
+    <div class="content-fluid">
+        <main>
+            <header class="header">
+                <div class="header-bar container">
+                    <a class="btn btn--small btn--icon toggle-menu" id="toggle" href="#menu">
+                        <span class="icon-list-menu"></span>
+                    </a>
+					<div id="menu">
+						<ul>
+							<li class="toggleMenu"><a href="../../../judgeapp/templates/judgeapp/judge-home.html" class="linkToggle">Home</li></a>
+							<li class="toggleMenu"><a href="../../../judgeapp/templates/judgeapp/judge-timeslot.html" class="linkToggle">Timeslots</a></li>
+							<li class="toggleMenu"><a href="../../../judgeapp/templates/judgeapp/judge-score.html" class="linkToggle">Scores</a></li>
+						</ul>
+					</div>
+                    <a href="../../../judgeapp/templates/judgeapp/judge-home.html" class="header-bar__logo">
+                        <span class="icon-cisco"></span>
+                    </a>
+                    <div class="header-bar__main">
+                        <div class="header-heading">
+                            <h1 class="page-title">SAP Cross Collaboration Platform</h1>
+                        </div>
+                    </div>
+					<form>
+						<div class="form-group">
+							<div class="form-group__text select">
+								<select name="select2">
+									<option value="0" selected>Spring 2018</option>
+								</select>
+								<label for="select2">Select Cohort</label>
+							</div>
+						</div>
+					</form>
+                </div>
+            </header>
+            <div class="hero hero--blue">
+                <div class="container">
+					
+                </div>
+            </div>
+            <div class="content">
+                <div class="container">
+					<h3>Scorecard</h3>
+					<hr>
+					
+					<br>
+					<b>Technical/Business Proficiency: Does the team exhibit the expected level of technical and business knowledge?*</b><br><br>
+					<b>Does not meet expectations</b>
+					<div class="row">
+						<ul>
+							<li>Does not demonstrate expected knowledge</li>
+							<li>Cannot articulate clear answers to questions</li>
+							<li>Is not able to apply knowledge to a problem scenario</li>
+						</ul>
+					</div>
+					<b>Meets Expectations</b>
+					<div class="row">
+						<ul>
+							<li>Demonstrates the expected level of knowledge</li>
+							<li>Is able to clearly articulate answers and explanations to questions</li>
+							<li>Is able to apply knowledge appropriately to a problem scenario</li>
+						</ul>
+					</div>
+					<div class="form-group__text select row col-md-3">
+						<select name="select3">
+							<option value="1" selected>1 (Does not meet expectations)</option>
+							<option value="2" selected>2</option>
+							<option value="3" selected>3</option>
+							<option value="4" selected>4</option>
+							<option value="5" selected>5</option>
+							<option value="6" selected>6</option>
+							<option value="7" selected>7 (Meets Expectations)</option>
+							<option value="8" selected>8</option>
+							<option value="9" selected>9</option>
+							<option value="10" selected>10 (Exceeds expectations)</option>
+						</select>
+						<label for="select3">Select Proficiency: </label>
+					</div>
+					
+					<br>
+					<br>
+					
+					<b>Communication: Is the team able to clearly and concisely explain technical concepts?*</b><br><br>
+					<b>Does not meet expectations</b>
+					<div class="row">
+						<ul>
+							<li>Cannot articulate clear answers to questions</li>
+							<li>Explanations are convoluted and difficult to follow</li>
+						</ul>
+					</div>
+					<b>Meets Expectations</b>
+					<div class="row">
+						<ul>
+							<li>Is able to clearly articulate answers and explanations to questions</li>
+							<li>Explanations are direct and easy to understand</li>
+						</ul>
+					</div>
+					<div class="form-group__text select row col-md-3">
+						<select name="select4">
+							<option value="1" selected>1 (Does not meet expectations)</option>
+							<option value="2" selected>2</option>
+							<option value="3" selected>3</option>
+							<option value="4" selected>4</option>
+							<option value="5" selected>5</option>
+							<option value="6" selected>6</option>
+							<option value="7" selected>7 (Meets Expectations)</option>
+							<option value="8" selected>8</option>
+							<option value="9" selected>9</option>
+							<option value="10" selected>10 (Exceeds expectations)</option>
+						</select>
+						<label for="select4">Select Proficiency: </label>
+					</div>
+						
+					<br>
+					<br>
+					
+					<b>Time Management: Is the team able to work within the customer’s time constraints?*</b><br><br>
+					<b>Does not meet expectations</b>
+					<div class="row">
+						<ul>
+							<li>Cannot answer questions in the time allotted</li>
+							<li>Pace is poor – speaks too quickly or too slowly</li>
+							<li>Deviates from topic and loses focus</li>
+						</ul>
+					</div>
+					<b>Meets Expectations</b>
+					<div class="row">
+						<ul>
+							<li>Accurately explains concepts in the time allotted</li>
+							<li>Pace is appropriate</li>
+							<li>Stays focused and on topic</li>
+						</ul>
+					</div>
+					<div class="form-group__text select row col-md-3">
+						<select name="select5">
+							<option value="1" selected>1 (Does not meet expectations)</option>
+							<option value="2" selected>2</option>
+							<option value="3" selected>3</option>
+							<option value="4" selected>4</option>
+							<option value="5" selected>5</option>
+							<option value="6" selected>6</option>
+							<option value="7" selected>7 (Meets Expectations)</option>
+							<option value="8" selected>8</option>
+							<option value="9" selected>9</option>
+							<option value="10" selected>10 (Exceeds expectations)</option>
+						</select>
+						<label for="select5">Select Proficiency: </label>
+					</div>
+					
+					<br>
+					<br>
+					
+					<b>Professional Demeanor: Is the team able to build a relationship and present a professional demeanor to the customer?*</b><br><br>
+					<b>Does not meet expectations</b>
+					<div class="row">
+						<ul>
+							<li>Extreme nervousness and lack of confidence</li>
+							<li>Appearance is inappropriate for a customer presentation</li>
+							<li>Dishonest, unwilling to say, "I don't know", making up answers</li>
+						</ul>
+					</div>
+					<b>Meets Expectations</b>
+					<div class="row">
+						<ul>
+							<li>Calm and confident</li>
+							<li>Appearance is appropriate for customer presentation</li>
+							<li>Shows integrity and honesty, demeanor breeds trust and respect, is able to admit when they do not know the answer</li>
+						</ul>
+					</div>
+					<div class="form-group__text select row col-md-3">
+						<select name="select5">
+							<option value="1" selected>1 (Does not meet expectations)</option>
+							<option value="2" selected>2</option>
+							<option value="3" selected>3</option>
+							<option value="4" selected>4</option>
+							<option value="5" selected>5</option>
+							<option value="6" selected>6</option>
+							<option value="7" selected>7 (Meets Expectations)</option>
+							<option value="8" selected>8</option>
+							<option value="9" selected>9</option>
+							<option value="10" selected>10 (Exceeds expectations)</option>
+						</select>
+						<label for="select5">Select Proficiency: </label>
+					</div>
+					
+					<br>
+					<br>
+					
+					<b>Reviewer Comments</b><br>
+					<textarea style="width: 70%; height: 70px;"></textarea>
+					
+					<br>
+					<br>
+			
+						
+				</div>
+				<!-- makes footer unsticky to be within the container div -->
+				<footer class="footer footer--new">
+					<div class="footer__links">
+						<ul class="list">
+							<li><a href="http://www.cisco.com/cisco/web/siteassets/contacts/index.html" target="_blank">Contacts</a></li>
+							<li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="_blank">Feedback</a></li>
+							<li><a href="http://www.cisco.com/c/en/us/about/sitemap.html" target="_blank">Site Map</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html" target="_blank">Terms & Conditions</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html" target="_blank">Privacy Statement</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/privacy_full.html#cookies" target="_blank">Cookie Policy</a></li>
+							<li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li>
+						</ul>
+					</div>
+					<div class="footer__legal">
+						<div class="footer__logo">
+							<a href="http://www.cisco.com" target="_blank">
+								<span class="icon-cisco"></span>
+							</a>
+						</div>
+						<div class="footer__copyright">
+							<div>Copyright &copy; 2017 Cisco Systems Inc.</div>
+							<div>All rights reserved.</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+			
+        </main>
+    </div>
+	
+	<script>
+		var theToggle = document.getElementById('toggle');
+
+		// based on Todd Motto functions
+		// https://toddmotto.com/labs/reusable-js/
+
+		// hasClass
+		function hasClass(elem, className) {
+			return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+		}
+		// addClass
+		function addClass(elem, className) {
+			if (!hasClass(elem, className)) {
+				elem.className += ' ' + className;
+			}
+		}
+		// removeClass
+		function removeClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+			if (hasClass(elem, className)) {
+				while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+					newClass = newClass.replace(' ' + className + ' ', ' ');
+				}
+				elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			}
+		}
+		// toggleClass
+		function toggleClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+			if (hasClass(elem, className)) {
+				while (newClass.indexOf(" " + className + " ") >= 0 ) {
+					newClass = newClass.replace( " " + className + " " , " " );
+				}
+				elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			} else {
+				elem.className += ' ' + className;
+			}
+		}
+
+		theToggle.onclick = function() {
+		   toggleClass(this, 'on');
+		   return false;
+		}
+	</script>
+</body>
+</html>
