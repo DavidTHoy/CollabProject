@@ -5,7 +5,6 @@
     <title>SAP Cross Collaboration</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'judgeapp\css\cui-standard.min.css' %}">
-{{ user }}
 </head>
 <body class="cui">
     <div class="content-fluid">
@@ -17,11 +16,11 @@
                     </a>
 					<div id="menu">
 						<ul>
-							<li class="toggleMenu"><a href="{% url 'timeslot' %}" class="linkToggle">Timeslots</a></li>
-							<li class="toggleMenu"><a href="{% url 'score' %}" class="linkToggle">Scores</a></li>
+							<li class="toggleMenu"><a href="{% url 'judge-timeslot' %}" class="linkToggle">Timeslots</a></li>
+							<li class="toggleMenu"><a href="{% url 'judge-score' %}" class="linkToggle">Scores</a></li>
 						</ul>
 					</div>
-                    <a href="{% url 'index' %}" class="header-bar__logo">
+                    <a href="{% url 'judge-home' %}" class="header-bar__logo">
                         <span class="icon-cisco"></span>
                     </a>
                     <div class="header-bar__main">
@@ -29,7 +28,7 @@
                             <h1 class="page-title">SAP Cross Collaboration Platform</h1>
                         </div>
                     </div>
-                    <a href="{% url 'logout' %}" class="header-bar__logo">
+                    <a href="{% url 'judge-logout' %}" class="header-bar__logo">
                         <li>logout</li>
                         <span class="icon-cisco"></span>
                     </a>
@@ -46,19 +45,19 @@
 						<div class="col-md-3 menuTopic">
 						</div>
 						<div class="col-md-3 menuTopic">
-                            <a href="{% url 'timeslot' %}" class="menuPic">
+                            <a href="{% url 'judge-timeslot' %}" class="menuPic">
 								<img class="thumb thumb--huge thumb--square" src="{% static 'judgeapp/img/timeslot.jpg' %}" />
 							</a>
 							<div class="menuMid">
-								<a href="{% url 'timeslot' %}"><div class="menuText">Timeslots</div></a>
+								<a href="{% url 'judge-timeslot' %}"><div class="menuText">Timeslots</div></a>
 							</div>
                         </div>
                         <div class="col-md-3 menuTopic" >
-                            <a href="{% url 'score' %}" class="menuPic">
+                            <a href="{% url 'judge-score' %}" class="menuPic">
 								<img class="thumb thumb--huge thumb--square" src="{% static 'judgeapp/img/team.jpg' %}" />
 							</a>
 							<div class="menuMid">
-								<a href="{% url 'score' %}"><div class="menuText">Scores</div></a>
+								<a href="{% url 'judge-score' %}"><div class="menuText">Scores</div></a>
 							</div>
                         </div>
                     

@@ -16,13 +16,13 @@
                     </a>
 					<div id="menu">
 						<ul>
-							<li class="toggleMenu"><a href="{% url 'members' %}" class="linkToggle">Members</li></a>
-							<li class="toggleMenu"><a href="{% url 'topic' %}" class="linkToggle">Topics</a></li>
-							<li class="toggleMenu"><a href="{% url 'assignment' %}" class="linkToggle">Assignments</a></li>
-							<li class="toggleMenu"><a href="{% url 'score' %}" class="linkToggle">Score</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-members' %}" class="linkToggle">Members</li></a>
+							<li class="toggleMenu"><a href="{% url 'team-topic' %}" class="linkToggle">Topics</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-assignment' %}" class="linkToggle">Assignments</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-score' %}" class="linkToggle">Score</a></li>
 						</ul>
 					</div>
-                    <a href="{% url 'index' %}" class="header-bar__logo">
+                    <a href="{% url 'team-menu' %}" class="header-bar__logo">
                         <span class="icon-cisco"></span>
                     </a>
                     <div class="header-bar__main">
@@ -41,37 +41,37 @@
                 <div class="container">
                     <div class="row">
 						<div class="col-md-3 menuTopic">
-							<a href="{% url 'members' %}" class="menuPic">
+							<a href="{% url 'team-members' %}" class="menuPic">
 								<img class="thumb thumb--huge thumb--square" src="{% static 'teamapp/img/team.jpg' %}" />
 							</a>
 							<div class="menuMid">
-								<a href="{% url 'members' %}"><div class="menuText">Members</div></a>
+								<a href="{% url 'team-members' %}"><div class="menuText">Members</div></a>
 							</div>
 						</div>
 						<div class="col-md-3 menuTopic">
-							<a href="{% url 'topic' %}" class="menuPic">
+							<a href="{% url 'team-topic' %}" class="menuPic">
 								<img class="thumb thumb--huge thumb--square" src="{% static 'teamapp/img/topic.jpg' %}" />
 							</a>
 							<div class="menuMid">
-								<a href="{% url 'topic' %}"><div class="menuText">Topics</div></a>
+								<a href="{% url 'team-topic' %}"><div class="menuText">Topics</div></a>
 							</div>
 						</div>
 
                         <div class="col-md-3 menuTopic" >
-                            <a href="{% url 'assignment' %}" class="menuPic">
+                            <a href="{% url 'team-assignment' %}" class="menuPic">
 								<img class="thumb thumb--huge thumb--square" src="{% static 'teamapp/img/assignments.jpg' %}" />
 							</a>
 							<div class="menuMid">
-								<a href="{% url 'assignment' %}"><div class="menuText">Assignment</div></a>
+								<a href="{% url 'team-assignment' %}"><div class="menuText">Assignment</div></a>
 							</div>
                         </div>
 
 						<div class="col-md-3 menuTopic">
-                            <a href="{% url 'score' %}" class="menuPic">
+                            <a href="{% url 'team-score' %}" class="menuPic">
 								<img class="thumb thumb--huge thumb--square" src="{% static 'teamapp/img/timeslot.jpg' %}" />
 							</a>
 							<div class="menuMid">
-								<a href="{% url 'score' %}"><div class="menuText">Score</div></a>
+								<a href="{% url 'team-score' %}"><div class="menuText">Score</div></a>
 							</div>
                         </div>
 

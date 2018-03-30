@@ -16,12 +16,14 @@
                     </a>
 					<div id="menu">
 						<ul>
-							<li class="toggleMenu"><a href="../../../judgeapp/templates/judgeapp/judge-home.html" class="linkToggle">Home</li></a>
-							<li class="toggleMenu"><a href="../../../judgeapp/templates/judgeapp/judge-timeslot.html" class="linkToggle">Timeslots</a></li>
-							<li class="toggleMenu"><a href="../../../judgeapp/templates/judgeapp/judge-score.html" class="linkToggle">Scores</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-menu' %}" class="linkToggle">Team Home</li></a>
+							<li class="toggleMenu"><a href="{% url 'team-members' %}" class="linkToggle">Members</li></a>
+							<li class="toggleMenu"><a href="{% url 'team-topic' %}" class="linkToggle">Topics</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-assignment' %}" class="linkToggle">Assignments</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-score' %}" class="linkToggle">Scores</a></li>
 						</ul>
 					</div>
-                    <a href="../../../judgeapp/templates/judgeapp/judge-home.html" class="header-bar__logo">
+                    <a href="{% url 'team-menu' %}" class="header-bar__logo">
                         <span class="icon-cisco"></span>
                     </a>
                     <div class="header-bar__main">

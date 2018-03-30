@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form action="{% url 'login' %}" method="POST" enctype="multipart/form-data">
+<form action="{% url 'judge-login' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
   Username:<br>
   <input type="text" name="username" value="">

@@ -19,20 +19,20 @@
                     </a>
 					<div id="menu">
 						<ul>
-							<li class="toggleMenu"><a href="team-menu.html" class="linkToggle">Team Home</li></a>
-							<li class="toggleMenu"><a href="team-member.html" class="linkToggle">Members</li></a>
-							<li class="toggleMenu"><a href="team-topic.html" class="linkToggle">Topics</a></li>
-							<li class="toggleMenu"><a href="team-assignment.html" class="linkToggle">Assignments</a></li>
-							<li class="toggleMenu"><a href="team-score.html" class="linkToggle">Scores</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-menu' %}" class="linkToggle">Team Home</li></a>
+							<li class="toggleMenu"><a href="{% url 'team-members' %}" class="linkToggle">Members</li></a>
+							<li class="toggleMenu"><a href="{% url 'team-topic' %}" class="linkToggle">Topics</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-assignment' %}" class="linkToggle">Assignments</a></li>
+							<li class="toggleMenu"><a href="{% url 'team-score' %}" class="linkToggle">Scores</a></li>
 						</ul>
 					</div>
-                    <a class="header-bar__logo" href="team-menu.html">
+                    <a class="header-bar__logo" href="{% url 'team-menu' %}">
                         <span class="icon-cisco"></span>
                     </a>
 					
                     <div class="header-bar__main">
 					<ul class="breadcrumb">
-						<li><a href="admin-home.html">Team Home</a></li>
+						<li><a href="{% url 'team-menu' %}">Team Home</a></li>
 						<li><span>Assignments</span></li>
 					</ul>
                         <div class="header-heading">
